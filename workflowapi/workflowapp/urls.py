@@ -8,7 +8,7 @@ app_name = 'workflowapp'
 router = routers.DefaultRouter()
 router.register(r'workflow', views.workflowViewSet)
 router.register(r'comment', views.commentViewSet)
-
+router.register(r'steps', views.stepViewSet)
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [

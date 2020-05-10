@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
-from .serializers import workflowSerializer, commentSerializer
-from .models import workflow, comment
+from .serializers import workflowSerializer, commentSerializer, stepSerializer
+from .models import workflow, comment, step
 
 # Create your views here.
 
@@ -13,7 +13,7 @@ class workflowViewSet(viewsets.ModelViewSet):
     """
     queryset = workflow.objects.all()
     serializer_class = workflowSerializer
-    permission_classes = [permissions.IsAuthenticated]
+
 
 class commentViewSet(viewsets.ModelViewSet):
     """
@@ -21,4 +21,12 @@ class commentViewSet(viewsets.ModelViewSet):
     """
     queryset = comment.objects.all()
     serializer_class = commentSerializer
-    permission_classes = [permissions.IsAuthenticated]
+
+
+
+class stepViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = step.objects.all()
+    serializer_class = stepSerializer
