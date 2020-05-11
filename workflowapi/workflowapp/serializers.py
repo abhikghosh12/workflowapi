@@ -1,19 +1,19 @@
 # serializers.py
 from rest_framework import serializers
-
+from drf_writable_nested.serializers import WritableNestedModelSerializer
 from .models import workflow, comment, step
 
 
-class stepSerializer(serializers.HyperlinkedModelSerializer):
+class stepSerializer(serializers.ModelSerializer):
     class Meta:
         model = step
         fields = ['name', 'description']
 
-class workflowSerializer(serializers.HyperlinkedModelSerializer):
-    steps = stepSerializer( many=True, read_only=True)
+class workflowSerializer(WritableNestedModelSerializer):
+    steps = stepSerializer( many=True)
     class Meta:
         model = workflow
-        fields = ['name', 'description', 'steps' ]
+        fields = ['name', 'description', 'steps']
 
 class commentSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

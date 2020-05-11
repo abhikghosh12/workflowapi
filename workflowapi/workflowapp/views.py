@@ -66,3 +66,11 @@ class stepViewSet(mixins.RetrieveModelMixin,mixins.CreateModelMixin,mixins.Updat
 
     def post(self, request, *args, **kwargs):
         return self.create(request, *args, **kwargs)
+
+class workflowListView(generics.ListCreateAPIView):
+    queryset = workflow.objects.all()
+    serializer_class = workflowSerializer
+
+class commentListView(generics.ListCreateAPIView):
+    queryset = comment.objects.all()
+    serializer_class = commentSerializer
