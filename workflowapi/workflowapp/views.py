@@ -4,29 +4,65 @@ from rest_framework import viewsets
 from rest_framework import permissions
 from .serializers import workflowSerializer, commentSerializer, stepSerializer
 from .models import workflow, comment, step
-
+from rest_framework import status, generics
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from .serializers import *
+from rest_framework import status , generics , mixins
 # Create your views here.
 
-class workflowViewSet(viewsets.ModelViewSet):
+class workflowViewSet(mixins.RetrieveModelMixin,mixins.CreateModelMixin,mixins.UpdateModelMixin,mixins.DestroyModelMixin,generics.GenericAPIView):
     """
     API endpoint that allows users to be viewed or edited.
     """
     queryset = workflow.objects.all()
     serializer_class = workflowSerializer
 
+    def get(self, request, *args, **kwargs):
+        return self.retrieve(request, *args, **kwargs)
 
-class commentViewSet(viewsets.ModelViewSet):
+    def put(self, request, *args, **kwargs):
+        return self.update(request, *args, **kwargs)
+
+    def delete(self, request, *args, **kwargs):
+        return self.destroy(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        return self.create(request, *args, **kwargs)
+
+class commentViewSet(mixins.RetrieveModelMixin,mixins.CreateModelMixin,mixins.UpdateModelMixin,mixins.DestroyModelMixin,generics.GenericAPIView):
     """
     API endpoint that allows users to be viewed or edited.
     """
     queryset = comment.objects.all()
     serializer_class = commentSerializer
+    def get(self, request, *args, **kwargs):
+        return self.retrieve(request, *args, **kwargs)
 
+    def put(self, request, *args, **kwargs):
+        return self.update(request, *args, **kwargs)
 
+    def delete(self, request, *args, **kwargs):
+        return self.destroy(request, *args, **kwargs)
 
-class stepViewSet(viewsets.ModelViewSet):
+    def post(self, request, *args, **kwargs):
+        return self.create(request, *args, **kwargs)
+
+class stepViewSet(mixins.RetrieveModelMixin,mixins.CreateModelMixin,mixins.UpdateModelMixin,mixins.DestroyModelMixin,generics.GenericAPIView):
     """
     API endpoint that allows users to be viewed or edited.
     """
     queryset = step.objects.all()
     serializer_class = stepSerializer
+
+    def get(self, request, *args, **kwargs):
+        return self.retrieve(request, *args, **kwargs)
+
+    def put(self, request, *args, **kwargs):
+        return self.update(request, *args, **kwargs)
+
+    def delete(self, request, *args, **kwargs):
+        return self.destroy(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        return self.create(request, *args, **kwargs)
