@@ -20,3 +20,5 @@ urlpatterns = [
     url(r'^comment/(?P<pk>[0-9]+)$', views.commentViewSet.as_view()),
     url(r'^step/(?P<pk>[0-9]+)$', views.stepViewSet.as_view())
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
