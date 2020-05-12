@@ -41,7 +41,7 @@ This will start the localserver at : http://localhost:8000/
 
 
 ```
-python manage.py runserver 0:8000
+python manage.py runserver
 ```
 
 ###  Create superuser:
