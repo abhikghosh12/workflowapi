@@ -17,6 +17,7 @@ class workflowViewSet(mixins.RetrieveModelMixin,mixins.CreateModelMixin,mixins.U
     """
     queryset = workflow.objects.all()
     serializer_class = workflowSerializer
+    permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request, *args, **kwargs):
         return self.retrieve(request, *args, **kwargs)
@@ -36,6 +37,8 @@ class commentViewSet(mixins.RetrieveModelMixin,mixins.CreateModelMixin,mixins.Up
     """
     queryset = comment.objects.all()
     serializer_class = commentSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
     def get(self, request, *args, **kwargs):
         return self.retrieve(request, *args, **kwargs)
 
@@ -54,6 +57,7 @@ class stepViewSet(mixins.RetrieveModelMixin,mixins.CreateModelMixin,mixins.Updat
     """
     queryset = step.objects.all()
     serializer_class = stepSerializer
+    permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request, *args, **kwargs):
         return self.retrieve(request, *args, **kwargs)
@@ -69,8 +73,9 @@ class stepViewSet(mixins.RetrieveModelMixin,mixins.CreateModelMixin,mixins.Updat
 
 class workflowListView(generics.ListCreateAPIView):
     queryset = workflow.objects.all()
-    serializer_class = workflowSerializer
+
 
 class commentListView(generics.ListCreateAPIView):
     queryset = comment.objects.all()
     serializer_class = commentSerializer
+    permission_classes = [permissions.IsAuthenticated]

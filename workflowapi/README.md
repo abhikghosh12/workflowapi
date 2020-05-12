@@ -1,18 +1,37 @@
 # How to use the workflow api
 
-Within this short documentation we want to show how to use the gitlab issue
-board as an agile board for sprint planning etc.
+Within this short documentation, we want to show how to use the workflow api.
 
-## Prerequesities
+## requiremnts
 
-To get the most out of this overview, you should be a bit familiar with the Agile
-or Scrum workflow. The following concepts should be at least heard of:
-- Sprint
-- User Story
-- Tasks
-- Assignee
+Django==2.2.3
+Python==3.7
+djangorestframework==3.8
 
 ## Overview
+It uses django rest framework to build api. Here lets run the app.
+
+Build the api:
+```
+python manage.py migrate
+python manage.py makemigrations workflowapp
+
+```
+start the Server:
+```
+python manage.py runserver 0:8000
+```
+This will start the server at : http://127.0.0.1:8000/
+
+## The example above would generate the following URL patterns:
+
+Access the admin: http://localhost:8000/admin/
+user: admin password: admin
+
+URL pattern: ^workflow/$ Name: [ workflow-list](http://localhost:8000/workflow/)
+URL pattern: ^workflow/{pk}/$ Name: [ workflow-detail](http://localhost:8000/workflow/1)
+URL pattern: ^comment/$ Name: [comment-list](http://localhost:8000/comment/)
+URL pattern: ^comment/{pk}/$ Name: [comment-detail](http://localhost:8000/comment/1)
 
 The figure below shows the overview of the used agile board within this project.
 You can find it under **Issues --> Boards**. There you can change between different
@@ -23,7 +42,8 @@ end of the **sprint** and is achieved with the end of the related **sprint**.
 
 ![Overview Issue Board](/docu/pictures/agile_board.JPG)
 
-## Explanation of each list and label
+## Testing the api
+
 
 To dive deaper into the usage of such an agile board, we now explain the usage of
 every list in the board. On the left side, you first see the **Story** list. This list
@@ -64,3 +84,11 @@ now is the time where you can **close** the issue.
 
 Thats a first quick overview. Maybe we go further in depth how to use MR and how to
 to a review and approvals.
+
+
+## The example above would generate the following URL patterns:
+
+URL pattern: ^workflow/$ Name: 'workflow-list'
+URL pattern: ^workflow/{pk}/$ Name: 'workflow-detail'
+URL pattern: ^comment/$ Name: 'comment-list'
+URL pattern: ^comment/{pk}/$ Name: 'comment-detail'

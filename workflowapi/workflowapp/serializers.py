@@ -10,12 +10,12 @@ class stepSerializer(serializers.ModelSerializer):
         fields = ['name', 'description']
 
 class workflowSerializer(WritableNestedModelSerializer):
-    steps = stepSerializer( many=True)
+    steps = stepSerializer(many=True)
     class Meta:
         model = workflow
         fields = ['name', 'description', 'steps']
 
-class commentSerializer(serializers.HyperlinkedModelSerializer):
+class commentSerializer(serializers.ModelSerializer):
     class Meta:
         model = comment
         fields = ['name', 'text']
