@@ -2,7 +2,7 @@
 
 Within this short documentation, we want to show how to use the workflow api.
 
-## Requiremnts
+## Requirements
 
 - Django==2.2.3
 - Python==3.7.7
