@@ -19,5 +19,3 @@ class step(models.Model):
 
     def __str__(self):
         return 'Step_name: {} Description {}'.format(self.name, self.description)
-    #def __str__(self):
-        #return '%s ' % (self.name)
