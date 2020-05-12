@@ -5,24 +5,45 @@ Within this short documentation, we want to show how to use the workflow api.
 ## Requiremnts
 
 - Django==2.2.3
-- Python==3.7
+- Python==3.7.7
 - djangorestframework==3.8
 - drf-nested-routers
 
 ## Overview
-It uses django rest framework to build api. Here lets run the app.
+It uses django rest framework to build API. Here lets Build, run and test the app. It creats a nested serializer and uses HTTP REST methods to do all CRUD functions.
 
-Build the api:
+The figure shows the Overview of the project. This has app folder called workflowapp and project folder workflowapi.
+
+![retrieve from workflow api](/workflowapi/pictures/overview.JPG)
+
+### Build the API:
+
+This will built the django API with sqlite3 databases.
+
 ```
 python manage.py migrate
 python manage.py makemigrations workflowapp
 
 ```
-start the Server:
+###  Test the models and serializer:
+
+This test checks the model and serializers. Here JSON data are provided for workflow and comment.
+This example JSON create to create a workflow
+
+```
+python tests.py
+
+```
+
+###  start the Server:
+
+This will start the localserver at : http://localhost:8000/
+
+
 ```
 python manage.py runserver 0:8000
 ```
-This will start the localserver at : http://localhost:8000/
+
 
 ## The example above would generate the following URL patterns:
 
@@ -37,7 +58,7 @@ This will start the localserver at : http://localhost:8000/
 
 ## Testing the api
 
-api is tested using [Insomnia](https://insomnia.rest/) for CRUD function. It is tested on workflow  and comment api end points.
+API is tested using [Insomnia](https://insomnia.rest/) for CRUD function. It is tested on workflow  and comment api end points.
 
 ### Make a GET Request
 
@@ -84,7 +105,7 @@ Here we focus on discussions related to the user story.
 ![retrieve from comment api](/workflowapi/pictures/DELETE_comment.JPG)
 
 
-## Troublesooting
+## Known problems with solutions
 
 sqlite3.OperationalError: no such table: workflowapp_workflow
 

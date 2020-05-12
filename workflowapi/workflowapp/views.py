@@ -7,7 +7,6 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import *
 from rest_framework import status , generics , mixins
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import TemplateView
 # Create your views here.
 
