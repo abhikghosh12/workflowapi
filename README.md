@@ -27,15 +27,15 @@ python manage.py makemigrations workflowapp
 ```
 ###  Test the models and serializer:
 
-This test checks the model and serializers. Here JSON data are provided for workflow and comment.
-This example JSON create to create a workflow
+This test 'tests.py' checks the model and serializers. This populates the databases with initial data. Here JSON data are provided for workflow and comment.
+This example JSON create to create a workflow tests.py
 
 ```
 python tests.py
 
 ```
 
-###  start the Server:
+###  Start the Server:
 
 This will start the localserver at : http://localhost:8000/
 
