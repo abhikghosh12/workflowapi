@@ -72,12 +72,7 @@ Here we focus on discussions related to the user story.
 
 #### Make a PUT Request to workflow API endpoint
 ![retrieve from comment api](/workflowapi/pictures/PUT_comment.JPG)
-The second board list is the **to Do** list. This list contains all tasks, needed
-to complete to achieve the **user story**. This means that every task related to
-the user story is in this list. It should be as small featured as possible and we
-additionally estimate a time it takes to complete this task (Remember this is done
-within the sprint planning and as a team). After listing every task we need to tackle
-and the sprint itself begins, we can start working on the tasks.
+
 
 ### Make a DELETE Request
 

@@ -1,8 +1,8 @@
 # workflow/urls.py
-from django.urls import include, path
+from django.urls import include, path, url
 from rest_framework import routers
 from . import views
-from django.conf.urls import url
+
 
 app_name = 'workflowapp'
 

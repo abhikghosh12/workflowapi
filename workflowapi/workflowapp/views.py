@@ -1,10 +1,8 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User, Group
-from rest_framework import viewsets
-from rest_framework import permissions
+from rest_framework import viewsets, permissions
 from .serializers import workflowSerializer, commentSerializer, stepSerializer
 from .models import workflow, comment, step
-from rest_framework import status, generics
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import *
@@ -72,10 +70,17 @@ class stepViewSet(mixins.RetrieveModelMixin,mixins.CreateModelMixin,mixins.Updat
         return self.create(request, *args, **kwargs)
 
 class workflowListView(generics.ListCreateAPIView):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
     queryset = workflow.objects.all()
-
+    serializer_class = workflowSerializer
+    permission_classes = [permissions.IsAuthenticated]
 
 class commentListView(generics.ListCreateAPIView):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
     queryset = comment.objects.all()
     serializer_class = commentSerializer
     permission_classes = [permissions.IsAuthenticated]
