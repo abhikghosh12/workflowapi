@@ -82,3 +82,12 @@ Here we focus on discussions related to the user story.
 
 #### Make a DELETE Request to workflow API endpoint
 ![retrieve from comment api](/workflowapi/pictures/DELETE_comment.JPG)
+
+
+## Troublesooting
+
+sqlite3.OperationalError: no such table: workflowapp_workflow
+
+```
+python manage.py migrate --run-syncdb
+```
