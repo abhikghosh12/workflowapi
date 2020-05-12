@@ -29,10 +29,10 @@ This will start the server at : http://127.0.0.1:8000/
 - user: admin
 - password: admin
 
-- URL pattern: ^workflow/$ Name: [ workflow-list](http://localhost:8000/workflow/)
-- URL pattern: ^workflow/{pk}/$ Name: [ workflow-detail](http://localhost:8000/workflow/1)
-- URL pattern: ^comment/$ Name: [comment-list](http://localhost:8000/comment/)
-- URL pattern: ^comment/{pk}/$ Name: [comment-detail](http://localhost:8000/comment/1)
+- **URL pattern**: ^workflow/$ , **Name**: [ workflow-list](http://localhost:8000/workflow/)
+- **URL pattern**: ^workflow/{pk}/$ , **Name**: [ workflow-detail](http://localhost:8000/workflow/1)
+- **URL pattern**: ^comment/$ **Name**: [comment-list](http://localhost:8000/comment/)
+- **URL pattern**: ^comment/{pk}/$ **Name**: [comment-detail](http://localhost:8000/comment/1)
 
 The figure below shows the overview of the used agile board within this project.
 You can find it under **Issues --> Boards**. There you can change between different
