@@ -44,7 +44,12 @@ end of the **sprint** and is achieved with the end of the related **sprint**.
 
 ## Testing the api
 
+api is tested using Insomnia for CRUD function. It is tested on workflow  and comment api end points.
 
+### GET
+
+![retrieve from workflow api](/pictures/GET.JPG)
+![retrieve from comment api](/pictures/GET_comment.JPG)
 To dive deaper into the usage of such an agile board, we now explain the usage of
 every list in the board. On the left side, you first see the **Story** list. This list
 contains every **user story** tackled within this sprint. It contains all realted taskst
@@ -52,15 +57,25 @@ to achieve the **user story**. These are so called related issues in gitlab.
 
 ![Related Issues](/docu/pictures/related_issues.JPG)
 
-Here we focus on discussions related to the user story.
+### POST
 
+![retrieve from workflow api](/pictures/POST.JPG)
+![retrieve from comment api](/pictures/POST_comment.JPG)
+Here we focus on discussions related to the user story.
+### UPDATE
+
+![retrieve from workflow api](/pictures/PUT_workflow.JPG)
+![retrieve from comment api](/pictures/PUT_comment.JPG)
 The second board list is the **to Do** list. This list contains all tasks, needed
 to complete to achieve the **user story**. This means that every task related to
 the user story is in this list. It should be as small featured as possible and we
 additionally estimate a time it takes to complete this task (Remember this is done
 within the sprint planning and as a team). After listing every task we need to tackle
 and the sprint itself begins, we can start working on the tasks.
+### DELETE
 
+![retrieve from workflow api](/pictures/DELETE_workflow.JPG)
+![retrieve from comment api](/pictures/DELETE_comment.JPG)
 Everyone who decides to start working on a task, assignes theirselve and moves the
 issue from the **to Do** board to the **Doing** board, indicating that he or she is
 actually working on the issue.
