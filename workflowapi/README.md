@@ -7,6 +7,7 @@ Within this short documentation, we want to show how to use the workflow api.
 - Django==2.2.3
 - Python==3.7
 - djangorestframework==3.8
+- drf-nested-routers
 
 ## Overview
 It uses django rest framework to build api. Here lets run the app.
@@ -21,7 +22,7 @@ start the Server:
 ```
 python manage.py runserver 0:8000
 ```
-This will start the server at : http://127.0.0.1:8000/
+This will start the localserver at : http://localhost:8000/
 
 ## The example above would generate the following URL patterns:
 

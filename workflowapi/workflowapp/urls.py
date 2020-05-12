@@ -1,8 +1,10 @@
 # workflow/urls.py
-from django.urls import include, path, url
+from django.urls import include, path
 from rest_framework import routers
 from . import views
-
+from django.conf.urls import url, include
+from django.conf.urls.static import static
+from django.conf import settings
 
 app_name = 'workflowapp'
 
@@ -18,7 +20,7 @@ urlpatterns = [
     url(r'^comment/$', views.commentListView.as_view()),
     url(r'^workflow/(?P<pk>[0-9]+)$', views.workflowViewSet.as_view()),
     url(r'^comment/(?P<pk>[0-9]+)$', views.commentViewSet.as_view()),
-    url(r'^step/(?P<pk>[0-9]+)$', views.stepViewSet.as_view())
+    url(r'^step/(?P<pk>[0-9]+)$', views.stepViewSet.as_view()),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
