@@ -7,7 +7,8 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import *
 from rest_framework import status , generics , mixins
-from django.views.generic import TemplateView
+
+
 # Create your views here.
 
 class workflowViewSet(mixins.RetrieveModelMixin,mixins.CreateModelMixin,mixins.UpdateModelMixin,mixins.DestroyModelMixin,generics.GenericAPIView):
@@ -72,15 +73,21 @@ class stepViewSet(mixins.RetrieveModelMixin,mixins.CreateModelMixin,mixins.Updat
 
 class workflowListView(generics.ListCreateAPIView):
     """
-    API endpoint that allows users to be viewed or edited.
+    API endpoint for workflow list that allows users to be viewed or edited.
     """
     queryset = workflow.objects.all()
     serializer_class = workflowSerializer
     permission_classes = [permissions.IsAuthenticated]
 
+    def list(self, request):
+
+        queryset = self.get_queryset()
+        serializer = workflowSerializer(queryset, many=True)
+        return Response(serializer.data)
+
 class commentListView(generics.ListCreateAPIView):
     """
-    API endpoint that allows users to be viewed or edited.
+    API endpoint for comment list that allows users to be viewed or edited.
     """
     queryset = comment.objects.all()
     serializer_class = commentSerializer

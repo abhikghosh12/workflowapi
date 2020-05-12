@@ -44,12 +44,21 @@ This will start the localserver at : http://localhost:8000/
 python manage.py runserver 0:8000
 ```
 
-
-## The example above would generate the following URL patterns:
+###  Create superuser:
 
 - Access the admin: http://localhost:8000/admin/
 - user: admin
 - password: admin
+
+ or
+
+ Create a new superuser
+```
+python manage.py createsuperuser
+```
+
+
+## The example above would generate the following URL patterns:
 
 - **URL pattern**: ^workflow/$ , **Name**: [ workflow-list](http://localhost:8000/workflow/)
 - **URL pattern**: ^workflow/{pk}/$ , **Name**: [ workflow-detail](http://localhost:8000/workflow/1)
