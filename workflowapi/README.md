@@ -34,14 +34,6 @@ This will start the server at : http://127.0.0.1:8000/
 - **URL pattern**: ^comment/$ **Name**: [comment-list](http://localhost:8000/comment/)
 - **URL pattern**: ^comment/{pk}/$ **Name**: [comment-detail](http://localhost:8000/comment/1)
 
-The figure below shows the overview of the used agile board within this project.
-You can find it under **Issues --> Boards**. There you can change between different
-boards. In our chase we use one board for every sprint. In addition we compare a
-sprint to the gitlab feature **MILESTONE**, so each **User Story** and **Task** challenged
-within one **sprint** is labeled with a **MILESTONE**. This **MILESTONE** is dated with the
-end of the **sprint** and is achieved with the end of the related **sprint**.
-
-
 ## Testing the api
 
 api is tested using [Insomnia](https://insomnia.rest/) for CRUD function. It is tested on workflow  and comment api end points.
