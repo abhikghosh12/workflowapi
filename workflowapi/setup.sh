@@ -27,6 +27,11 @@ python3 manage.py migrate
 python3 manage.py makemigrations workflowapp
 
 #start django server
+echo "Start test"
+#start django server on Port accessible from everyone
+python3 manage.py test
+
+#start django server
 echo "Start Server:"
 #start django server on Port accessible from everyone
 python3 manage.py runserver 0:8000

@@ -92,13 +92,13 @@ python manage.py createsuperuser
 
 #### workflow
 
-* **/workflow/**, **worwflow list**:[ workflow-list](http://localhost:8000/workflow/)(Todo create and list endpoint)
-* **/workflow/{pk}/**, **workflow-detail**: [ workflow-detail](http://localhost:8000/workflow/1)(Todo retrieve, update and destroy endpoint)
+* **/workflow/**: worwflow list [ workflow-list](http://localhost:8000/workflow/)(Todo create and list endpoint)
+* **/workflow/{pk}/**: workflow-detail [ workflow-detail](http://localhost:8000/workflow/1)(Todo retrieve, update and destroy endpoint)
 
 #### comment
 
-* **/comment/**, **comment list**: [comment-list](http://localhost:8000/comment/)(Todo create and list endpoint)
-* **/comment/{pk}/**, **comment-detail**: [comment-detail](http://localhost:8000/comment/)(Todo retrieve, update and destroy endpoint)
+* **/comment/**: comment list[comment-list](http://localhost:8000/comment/)(Todo create and list endpoint)
+* **/comment/{pk}/**: comment-detail [comment-detail](http://localhost:8000/comment/)(Todo retrieve, update and destroy endpoint)
 
 
 ## Testing the API (Integration tests)
@@ -107,8 +107,8 @@ API is tested using [Insomnia](https://insomnia.rest/) for CRUD function. It is 
 
 ### Make a GET Request
 
-Let's make another post request, to create some data. Only now, we must use our JWT to access the endpoint. Make a New Request and select the proper type & format. Then, complete the request URL/endpoint and body (make sure all required fields are included). Once you've done that, click on the HEADER tab. I want to make a header called Authorization (**user**: admin **password**: admin) and paste in the JWT I received from my Login request. Once I've done that, I'll hit SEND.
-
+Let's make another post request, to create some data. Make a New Request and select the proper type & format. Then, complete the request URL/endpoint and body (make sure all required fields are included). Once you've done that, click on the HEADER tab. I want to make a header called basic Authorization e.g. (**user**: admin **password**: admin)
+.
 #### Make a GET Request to workflow API endpoint  
 
 The figure below shows the GET Request at [API endpoint](http://localhost:8000/workflow/1)
