@@ -2,13 +2,13 @@
 
 Within this short documentation, we want to show how to use the workflow api.
 This readme describes every step required to get going with your own object detection classifier:
-1. [Requirements](## Requirements)
-2. [Build the API:](## Build the API)
-3. [Unit tests](## Unit tests)
-4. [ Update databases ](## Update databases )
-5. [ API Endpoints ](## API Endpoints )
-6. [ Testing the API (Integration tests) ](## Testing the API (Integration tests) )
-7. [ Known problems with solutions ](## Known problems with solutions )
+1. [Requirements](#Requirements)
+2. [Build the API:](#Build the API)
+3. [Unit tests](#Unit tests)
+4. [ Update databases ](#Update databases )
+5. [ API Endpoints ](#API Endpoints )
+6. [ Testing the API (Integration tests) ](#Testing the API (Integration tests) )
+7. [ Known problems with solutions ](#Known problems with solutions )
 
 ## Requirements
 
