@@ -152,7 +152,7 @@ Here we focus on discussions related to the user story.
 
 ## Known problems with solutions
 
-![Known problems](sqlite3.OperationalError: no such table: workflowapp_workflow) sqlite3.OperationalError: no such table: workflowapp_workflow
+sqlite3.OperationalError: no such table: workflowapp_workflow
 
 ```
 python manage.py migrate --run-syncdb
