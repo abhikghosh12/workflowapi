@@ -92,13 +92,13 @@ python manage.py createsuperuser
 
 #### workflow
 
-* **/workflow/**: worwflow list [ workflow-list](http://localhost:8000/workflow/)(Todo create and list endpoint)
-* **/workflow/{pk}/**: workflow-detail [ workflow-detail](http://localhost:8000/workflow/1)(Todo retrieve, update and destroy endpoint)
+* **/workflow/**: [ workflow-list](http://localhost:8000/workflow/)(Todo create and list endpoint)
+* **/workflow/{pk}/**: [ workflow-detail](http://localhost:8000/workflow/1)(Todo retrieve, update and destroy endpoint)
 
 #### comment
 
-* **/comment/**: comment list[comment-list](http://localhost:8000/comment/)(Todo create and list endpoint)
-* **/comment/{pk}/**: comment-detail [comment-detail](http://localhost:8000/comment/)(Todo retrieve, update and destroy endpoint)
+* **/comment/**: [comment-list](http://localhost:8000/comment/)(Todo create and list endpoint)
+* **/comment/{pk}/**: [comment-detail](http://localhost:8000/comment/)(Todo retrieve, update and destroy endpoint)
 
 
 ## Testing the API (Integration tests)
