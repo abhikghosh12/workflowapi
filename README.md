@@ -1,4 +1,4 @@
-# How to use the workflow api
+# How to use the workflow API
 
 Within this short documentation, we want to show how to use the workflow api.
 This readme describes every step required to get going with your own object detection classifier:
