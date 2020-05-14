@@ -13,11 +13,10 @@ from rest_framework import status , generics , mixins
 
 class workflowViewSet(mixins.RetrieveModelMixin,mixins.CreateModelMixin,mixins.UpdateModelMixin,mixins.DestroyModelMixin,generics.GenericAPIView):
     """
-    API endpoint that allows users to be viewed or edited.
+    API endpoint for workflow that allows users to be viewed or edited.
     """
     queryset = workflow.objects.all()
     serializer_class = workflowSerializer
-    permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request, *args, **kwargs):
         return self.retrieve(request, *args, **kwargs)
@@ -33,11 +32,10 @@ class workflowViewSet(mixins.RetrieveModelMixin,mixins.CreateModelMixin,mixins.U
 
 class commentViewSet(mixins.RetrieveModelMixin,mixins.CreateModelMixin,mixins.UpdateModelMixin,mixins.DestroyModelMixin,generics.GenericAPIView):
     """
-    API endpoint that allows users to be viewed or edited.
+    API endpoint for comment that allows users to be viewed or edited.
     """
     queryset = comment.objects.all()
     serializer_class = commentSerializer
-    permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request, *args, **kwargs):
         return self.retrieve(request, *args, **kwargs)
@@ -53,7 +51,7 @@ class commentViewSet(mixins.RetrieveModelMixin,mixins.CreateModelMixin,mixins.Up
 
 class stepViewSet(mixins.RetrieveModelMixin,mixins.CreateModelMixin,mixins.UpdateModelMixin,mixins.DestroyModelMixin,generics.GenericAPIView):
     """
-    API endpoint that allows users to be viewed or edited.
+    API endpoint for steps that allows users to be viewed or edited.
     """
     queryset = step.objects.all()
     serializer_class = stepSerializer
@@ -77,7 +75,6 @@ class workflowListView(generics.ListCreateAPIView):
     """
     queryset = workflow.objects.all()
     serializer_class = workflowSerializer
-    permission_classes = [permissions.IsAuthenticated]
 
     def list(self, request):
 
@@ -91,4 +88,3 @@ class commentListView(generics.ListCreateAPIView):
     """
     queryset = comment.objects.all()
     serializer_class = commentSerializer
-    permission_classes = [permissions.IsAuthenticated]

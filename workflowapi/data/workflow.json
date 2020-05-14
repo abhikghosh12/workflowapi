@@ -1,0 +1,14 @@
+{
+    "name": "How to nail something",
+    "description": "Basic instructions to nail something",
+    "steps": [
+      {
+         "name": "Place nail",
+         "description": "Hold nail on top the thing to be nailed"
+      },
+      {
+        "name": "Hit nail",
+        "description": "Hit the nail repeatedly with a hammer"
+      }
+    ]
+}

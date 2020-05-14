@@ -16,11 +16,9 @@ router = routers.DefaultRouter()
 urlpatterns = [
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^workflow/$', views.workflowListView.as_view()),
-    url(r'^comment/$', views.commentListView.as_view()),
-    url(r'^workflow/(?P<pk>[0-9]+)$', views.workflowViewSet.as_view()),
-    url(r'^comment/(?P<pk>[0-9]+)$', views.commentViewSet.as_view()),
-    url(r'^step/(?P<pk>[0-9]+)$', views.stepViewSet.as_view()),
+    url(r'^workflow/$', views.workflowListView.as_view(), name='workflowList'),
+    url(r'^comment/$', views.commentListView.as_view(), name='commentListView'),
+    url(r'^workflow/(?P<pk>[0-9]+)$', views.workflowViewSet.as_view(), name='workflowView'),
+    url(r'^comment/(?P<pk>[0-9]+)$', views.commentViewSet.as_view(), name='commentViewSet'),
+    url(r'^step/(?P<pk>[0-9]+)$', views.stepViewSet.as_view(), name='stepView'),
 ]
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

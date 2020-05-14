@@ -12,6 +12,12 @@ class comment(models.Model):
     name = models.CharField(blank=True, max_length=200)
     text = models.CharField(blank=True, max_length=200)
 
+    def get_comment(self):
+        return self.text + ' belongs to ' + self.name + '.'
+
+    def __str__(self):
+        return 'comment_name: {} '.format(self.name)
+
 class step(models.Model):
     workflow = models.ForeignKey(workflow, on_delete=models.CASCADE, related_name='steps', null=True, blank=True)
     name = models.CharField(blank=True, max_length=200)
