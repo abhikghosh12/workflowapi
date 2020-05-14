@@ -3,7 +3,7 @@
 Within this short documentation, we want to show how to use the workflow api.
 This readme describes every step required to get going with your own object detection classifier:
 1. [Requirements](#Requirements)
-2. [Build the API](#Build_the_API:)
+2. [Build the API](#Build_the_API)
 3. [Unit tests](#Unit_tests)
 4. [ Update databases ](#Update_databases)
 5. [ API Endpoints ](#API_Endpoints )
@@ -29,7 +29,7 @@ The figure shows the Overview of the project. This has app folder called workflo
 
 ![retrieve from workflow api](/workflowapi/pictures/overview.JPG)
 
-## Build the API:
+## Build the API
 
 This will built the django API with sqlite3 databases.
 
